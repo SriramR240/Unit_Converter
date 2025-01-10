@@ -1,7 +1,5 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def lengthform(request):
-    return render(request,'length.html')
-
-
+def weightform(request):
+    return render(request,'weight.html')

@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class ConverterConfig(AppConfig):
+class TemperatureConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'length'
+    name = 'temperature'

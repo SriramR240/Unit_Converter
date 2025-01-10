@@ -19,5 +19,7 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',include('converter.urls'))
+    path('length/',include('length.urls')),
+    path('weight/',include('weight.urls')),
+    path('temperature/',include('temperature.urls'))
 ]
