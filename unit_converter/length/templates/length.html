@@ -70,15 +70,16 @@
     <div class="container">
         <h1>Unit Converter</h1>
         <div class="nav">
-            <a href="../length">Length</a>
-            <a href="../weight">Weight</a>
-            <a href="../temperature">Temperature</a>
+            <a href="../length/">Length</a>
+            <a href="../weight/">Weight</a>
+            <a href="../temperature/">Temperature</a>
         </div>
 
         <!-- Placeholder for dynamic content -->
         <div>
             <!-- Length Conversion Page -->
-            <form method="post" action="length.html">
+            <form method="post" action="../length/">
+                {% csrf_token %}
                 <label for="lengthValue">Enter value:</label>
                 <input type="number" step="any" id="lengthValue" name="value" required>
 
@@ -110,7 +111,7 @@
             </form>
             <div class="result">
                 <!-- Converted value will appear here -->
-                Converted Value: <!-- Example: 100 meters = 0.1 kilometers -->
+                Converted Value: {{ converted_value }}
             </div>
         </div>
     </div>

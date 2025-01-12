@@ -77,7 +77,8 @@
 
         <!-- Placeholder for dynamic content -->
         <div>
-            <form method="post" action="temperature.html">
+            <form method="post" action="../temperature/">
+                {% csrf_token %}
                 <label for="tempValue">Enter value:</label>
                 <input type="number" step="any" id="tempValue" name="value" required>
 
@@ -99,7 +100,7 @@
             </form>
             <div class="result">
                 <!-- Converted value will appear here -->
-                Converted Value: <!-- Example: 100 Celsius = 212 Fahrenheit -->
+                Converted Value: {{ converted_value }}
             </div>
         </div>
 
